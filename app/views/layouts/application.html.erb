@@ -8,7 +8,41 @@
 </head>
 <body>
 
+<header>
+	<nav class="main">	
+	<span>TODOLIST</span>
+		<ul class="hmenu">
+		<% if user_signed_in? %>
+		<li class="welcome">Welcome <%= current_user.email %></li>
+		 <% end %>
+		 
+		<%= render 'devise/menu/registration_items' %>  
+		
+		  <%= render 'devise/menu/login_items' %>
+		
+		
+		</ul>
+		
+	</nav>
+	<nav class="navigate">
+		<ul>
+			<%= render 'shared/nav'%>
+		</ul>
+	</nav>
+</header>	
+	
+<section>
+		<% flash.each do |key,value| %>
+		<div class="flash" id="<%= key %>">
+			<%= value %>
+		</div>
+		<% end %>
+
+
+
+
 <%= yield %>
 
+</section>
 </body>
 </html>

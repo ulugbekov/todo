@@ -7,3 +7,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function(){
+	
+	$("#alert.flash, #notice.flash ").animate({opacity:o}, 2000);
+	
+	
+})

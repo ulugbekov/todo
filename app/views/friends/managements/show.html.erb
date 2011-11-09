@@ -1,0 +1,8 @@
+<h1>User Management</h1>
+<% if @friends.any? %>
+<% @friends.each do |friend| %>
+<ul><li class="users"><%= friend.email%><%= link_to "UNFOLLOW", friends_management_path(friend.id), :method=> :delete %></li></ul>
+	<% end %>
+	<% else %>
+	<h2>No friends yet.</h2>
+	<%end%>

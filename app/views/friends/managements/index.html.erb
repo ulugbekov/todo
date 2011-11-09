@@ -1,0 +1,5 @@
+<h1>User Management</h1>
+
+<% @users.each do |user| %>
+<ul><li class="users"><%= user.email%><%= link_to "FOLLOW", friends_management_path(user.id), :method=> :put %></li></ul>
+	<% end %>

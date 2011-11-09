@@ -37,6 +37,6 @@ production:
   reconnect: false
   database: todo_production
   pool: 5
-  username: root
-  password:
+  username: loopnext
+  password: mamasita90
   socket: /opt/local/var/run/mysql5/mysqld.sock

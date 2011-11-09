@@ -10,7 +10,7 @@
 
 <header>
 	<nav class="main">	
-	<span>TODOLIST</span>
+	<span><%= link_to 'TODOLIST', root_path %></span>
 		<ul class="hmenu">
 		<% if user_signed_in? %>
 		<li class="welcome">Welcome <%= current_user.email %></li>

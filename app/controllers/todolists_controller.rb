@@ -1,12 +1,14 @@
 class TodolistsController < ApplicationController
   # GET /todolists
   # GET /todolists.json
+  before_filter :authenticate_user!
   def index
     @todolists = Todolist.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @todolists }
+      
     end
   end
 
@@ -29,6 +31,7 @@ class TodolistsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @todolist }
+      format.js {}
     end
   end
 
@@ -46,6 +49,7 @@ class TodolistsController < ApplicationController
       if @todolist.save
         format.html { redirect_to @todolist, notice: 'Todolist was successfully created.' }
         format.json { render json: @todolist, status: :created, location: @todolist }
+        format.js {  }
       else
         format.html { render action: "new" }
         format.json { render json: @todolist.errors, status: :unprocessable_entity }
@@ -78,6 +82,7 @@ class TodolistsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to todolists_url }
       format.json { head :ok }
+      format.js {}
     end
   end
 end

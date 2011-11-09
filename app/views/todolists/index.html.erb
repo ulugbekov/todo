@@ -1,25 +1,19 @@
-<h1>Listing todolists</h1>
+<div id="todo">
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>All todolists</h1>
 
-<% @todolists.each do |todolist| %>
-  <tr>
-    <td><%= todolist.user_id %></td>
-    <td><%= todolist.name %></td>
-    <td><%= link_to 'Show', todolist %></td>
-    <td><%= link_to 'Edit', edit_todolist_path(todolist) %></td>
-    <td><%= link_to 'Destroy', todolist, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+
+
+	<ul id="todolist" >
+	<%= render @todolists  %>
+	</ul>
+
+
+
 
 <br />
+<div id="remote">
+<%= link_to 'Add Todo', new_todolist_path, :remote=> true %>
+</div>
 
-<%= link_to 'New Todolist', new_todolist_path %>
+</div>

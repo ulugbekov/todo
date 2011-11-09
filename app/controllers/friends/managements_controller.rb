@@ -2,7 +2,7 @@ class Friends::ManagementsController < ApplicationController
   before_filter :find_user, :only=>[:update, :destroy, :show ]
   before_filter :authenticate_user!
   def index
-    @users=User.all
+    @users=User.where(["id != ?", current_user.id])
   end
   def show
     @friends=@user.friends

@@ -19,9 +19,12 @@ body {
 		padding-top: 10px;
 		background-color: rgba(33,33,33,1);
 		span{
+			a{
 			color: gray;
 			margin-left: 30px;
 			font-size: 2em;
+			text-decoration:none;
+		}
 			}
 		ul {
 			float:right;
@@ -89,19 +92,36 @@ body {
 		width: 1024px;
 		height: 700px;
 		margin:auto auto;
+		padding-left:10px;
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 		margin-top:25px;
-		
+		 p {
+			width: 400px;
+			margin: auto auto;
+			color: rgba(33,33,33,0.7);
+			font-size: 2em;
+			margin-top:20px;
+			text-align: justify;
+			padding:20px;
+			
+		}
+		p:first-letter {
+			color:orange;
+			font-size:3em;
+			float:left;
+			margin-right:4px;
+			line-height: 30px;
+		}
 		#notice.flash {
 			background-color: rgb(83,255,101);
-			width: 200px;
+			width: 260px;
 			margin:auto auto;
 			margin-top:10px;
 			border-radius: 10px;;
 			text-align:center;
 		}
 		#alert.flash{
-			width: 200px;
+			width: 260px;
 			text-align:center;
 			margin: auto auto;
 			border-radius: 10px;
@@ -111,7 +131,7 @@ body {
 		}
 		
 		
-			div h2#signin{
+			div h2#sign{
 				
 				text-align:center;
 				
@@ -122,9 +142,11 @@ body {
 				width:220px;
 				margin:auto auto;
 				position:relative;
+				
 			form {
+			position:relative;
 			background-color: rgba(33,33,33,0.9);
-			height: 220px;
+			height: 240px;
 			width: 220px;
 			padding: 0px;
 			margin: auto auto;
@@ -154,7 +176,20 @@ body {
 				margin-top: 10px;
 				cursor: pointer;
 			}
-			
+			div#signin{
+				position:absolute;
+				bottom:90px;
+				right:30px;
+				width:40px;
+			}
+			div#signup{
+				position:absolute;
+				bottom:34px;
+				right:30px;
+				width:40px;
+				font-size:0.9em;
+				z-index:10;
+			}
 			div#checkbox {
 				width:140px;
 				margin-left:0px;
@@ -191,11 +226,10 @@ body {
 				background-color: #fbbf3e ;
 				border: 1px solid  rgb(62, 15, 94);
 				display:inline;
-				position:absolute;
-				bottom: 0px;
-				right:10px;
+				
 				cursor: pointer;
 				box-shadow:none;
+				z-index:3;
 			}
 			
 			
@@ -248,10 +282,14 @@ body {
 			position:absolute;
 			bottom:10px;
 			left:10px;
+			z-index:4;
 			a {
 			color: white;
 			}
-		}	
+		}
+		
+	
+			
 		}                
 			
 			
@@ -306,7 +344,111 @@ body {
 	h2 {
 		color:#666666;
 		margin-left: 20px;	
-	}	
+	}
+	
+	
+	div#todo{
+		margin:0px;
+		width:400px;
+		
+				ul#todolist{
+					color:orange;
+					width:100%;
+				}
+				li{
+					list-style:none;
+					font-size:1.7em;
+					position:relative;
+					width:300px;
+					margin-bottom: 6px;
+					a.edit{
+						text-decoration:none;
+						color:white;
+						position:absolute;
+						left:100px;
+						top:0px;
+						height:20px;
+						font-size:0.5em;
+						border: 1px black solid;
+						background-color: black;
+						border-radius: 3px;
+						padding: 4px;
+						padding-bottom:0px;
+						
+					}
+					a.destroy{
+							text-decoration:none;
+							color:white;
+							position:absolute;
+							left:150px;
+							top:0px;
+							font-size:0.5em;
+							border: 1px black solid;
+							background-color: black;
+							border-radius: 3px;
+							padding: 4px;
+						
+					}
+					a:hover {
+						border-top: solid 4px red;
+						padding-top:1px;
+						
+					}
+				}
+		
+	
+	
+		div#remote {
+			margin:0px;
+			
+			form{
+				height:24px;
+				padding-top:4px;
+				padding-bottom:4px;
+				label {
+					margin:0px;
+					margin-top:4px;
+					margin-left:2px;
+				}
+				input {
+					
+					height:18px;
+					width:120px;
+				
+					padding:0px;
+					display: inline-block;
+					font-size: 1em;
+				}
+				span input {
+					margin-top:4px;
+					height:16px;
+					width:50px;
+					
+					font-size: 10px;
+					padding:0px;
+					
+					
+				}
+				
+				
+		
+				
+				
+			}
+			
+			
+			
+			a{
+				text-decoration:none;
+				border: 1px solid green;
+				color:white;
+				background-color: rgba(33,33,33,0.7);
+				padding:2px;
+			}
+		}
+	}
+		
+			
 	}
 	
 }

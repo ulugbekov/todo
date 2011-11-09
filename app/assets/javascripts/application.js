@@ -6,11 +6,20 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require_tree .
 
 $(function(){
 	
-	$("#alert.flash, #notice.flash ").animate({opacity:o}, 2000);
+	$("#error_explanation").remove();
 	
+	
+	$("form#user_new input[type='submit']").click(function() {
+		
+		
+		
+	})
+	
+	$("ul#todolist").sortable();
 	
 })

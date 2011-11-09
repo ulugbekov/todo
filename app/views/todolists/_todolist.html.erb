@@ -1,0 +1,6 @@
+
+    <li id='<%= dom_id(todolist)%>'>
+    <%= todolist.name.capitalize %>
+    <%= link_to 'Edit', edit_todolist_path(todolist), :class=>'edit' %>
+    <%= link_to 'Destroy', todolist, confirm: 'Are you sure?', :remote=>true,method: :delete, :class=>"destroy" %>
+  	</li>

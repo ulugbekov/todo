@@ -12,7 +12,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: loopnext_development
+  database: todo_development
   pool: 5
   username: rails
   password: life0
@@ -25,7 +25,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: loopnext_test
+  database: todo_test
   pool: 5
   username: rails
   password: life0
@@ -35,7 +35,7 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: loopnext_production
+  database: todo_production
   pool: 5
   username: loopnext
   password: mamasita90

@@ -349,24 +349,27 @@ body {
 	
 	div#todo{
 		margin:0px;
-		width:400px;
+		width:700px;
 		
 				ul#todolist{
 					color:orange;
 					width:100%;
-				}
+				
+				
+				
 				li{
 					list-style:none;
 					font-size:1.7em;
 					position:relative;
-					width:300px;
+				
 					margin-bottom: 6px;
+					span{
+						
+					}
 					a.edit{
 						text-decoration:none;
 						color:white;
-						position:absolute;
-						left:100px;
-						top:0px;
+					
 						height:20px;
 						font-size:0.5em;
 						border: 1px black solid;
@@ -379,14 +382,13 @@ body {
 					a.destroy{
 							text-decoration:none;
 							color:white;
-							position:absolute;
-							left:150px;
-							top:0px;
+						
 							font-size:0.5em;
 							border: 1px black solid;
 							background-color: black;
 							border-radius: 3px;
 							padding: 4px;
+							padding-bottom:0px;
 						
 					}
 					a:hover {
@@ -394,6 +396,10 @@ body {
 						padding-top:1px;
 						
 					}
+				}
+				li:hover {
+					cursor: move;
+				}
 				}
 		
 	

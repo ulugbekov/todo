@@ -1,8 +1,8 @@
 class Friends::ManagementsController < ApplicationController
-  before_filter :find_user, :only=>[:update, :destroy, :show ]
+  before_filter :find_user, :only=>[:update, :destroy, :show, :index ]
   before_filter :authenticate_user!
   def index
-    @users=User.where(["id != ?", current_user.id])
+    @users=@user ? User.where(["id != ?", @user.id])-@user.friends  :  User.where(["id != ?", @user.id])
   end
   def show
     @friends=@user.friends

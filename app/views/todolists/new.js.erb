@@ -1,5 +1,11 @@
 
-	
+	if ( $("section div#remote form").length == 0 )  {
 	$("section div#remote").prepend("<%= escape_javascript render('form') %>")
+	$("form").hide().animate({opacity:0.0}).animate({opacity:1.0, height: 100+"%" },'slow')
 	$("#todolist_name").focus();
+	
+	
+}
+
+
 	

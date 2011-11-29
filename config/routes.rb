@@ -1,6 +1,9 @@
 Todo::Application.routes.draw do
   
-  resources :todolists
+  resources :todolists do
+    collection { post :sort }
+  end
+  
 
   root :to => 'home#index'
   

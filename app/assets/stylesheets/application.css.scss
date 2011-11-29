@@ -354,6 +354,8 @@ body {
 				ul#todolist{
 					color:orange;
 					width:100%;
+					margin-left: 40px;
+					padding:0px;
 				
 				
 				
@@ -407,6 +409,20 @@ body {
 		div#remote {
 			margin:0px;
 			
+			p.error{
+				width: 120px;
+				margin: auto auto;
+				margin-bottom: 2px;
+				background-color: blue;
+				color: white;
+				border-radius: 10px;
+				border: 1px solid red;
+				padding: 5px;
+				font-size: 0.8em;
+			}
+			
+			
+			
 			form{
 				height:24px;
 				padding-top:4px;
@@ -435,6 +451,8 @@ body {
 					
 					
 				}
+				
+				
 				
 				
 		

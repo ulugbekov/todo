@@ -12,6 +12,12 @@ gem "oa-oauth", :require => "omniauth/oauth"
 gem 'oa-core'
 gem 'therubyracer'
 
+gem 'newrelic_rpm'
+gem 'ruby-prof'
+
+ 
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -37,4 +43,5 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'rack-test'
 end

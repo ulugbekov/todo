@@ -13,13 +13,33 @@ $(function(){
 	
 	$("#error_explanation").remove();
 	
-	
-	$("form#user_new input[type='submit']").click(function() {
+	$("a[href='/todolists/new']").click(function(e) {
 		
-		
-		
+		if ($("div#remote form").length > 0 ) { return false; }
 	})
 	
-	$("ul#todolist").sortable();
+	
+	
+	
+	
+
+	
+	$(document).live("click", function(){ 
+	$("div#alert").animate({opacity:0}, 2000) 
+		
+		}); 
+	
+	$("ul#todolist").sortable({ axis: 'y', handle:'span.handle', opacity: 0.5,  update: function() {
+		$.post($(this).data('update-url'), $(this).sortable("serialize"))
+	}});
+	
+	
+	$(document).ajaxSuccess(function(event, request) {
+	  var msg = request.getResponseHeader('X-Message');
+	  if (msg) alert(msg);
+	});
+	
+	
 	
 })
+  

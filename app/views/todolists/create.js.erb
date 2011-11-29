@@ -1,2 +1,42 @@
-$("section ul#todolist").prepend("<%= escape_javascript render(@todolist) %>")
-$("div#remote form").remove()
+
+<%  if @todolist.errors.any?  %>
+ $("div#flash").html("<%= flash[:alert] %>")
+<% @todolist.errors.full_messages.each do |error| %>
+
+if ( $("div#remote p.error").length == 0 ) {
+$("div#remote").prepend("<p class='error' ></p>");
+$("div#remote p.error").html("<%=error %>")
+$("p.error").draggable();
+$("form#new_todolist input[type='submit']").click(function() {
+	
+ if ( $("form#new_todolist input[type='text']").val() == "" ) { 
+	
+	$("p.error").stop(true).animate({ opacity: 0.4 }, function() {
+		$(this).animate({opacity:1})
+	})
+	
+	
+	return false;}
+	
+})
+
+}
+
+
+<% end %> 
+
+<% else %>
+$("section ul#todolist").prepend("<%= escape_javascript render(@todolist) %>");
+$("div#flash").html("<%= flash[:notice] %>").delay(2000).fadeOut(2000)
+$("div#remote form").animate({opacity:0.0, height: 0},"slow", function() {
+	$(this).remove();
+})
+
+$("p.error").remove();
+<% end %>
+
+
+
+
+
+
